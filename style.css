@@ -1,88 +1,86 @@
 
 body {
-  font-family: 'Lato', sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  overflow: hidden;
+  background: #F8F8F8 ;
+  color: #999;
+  font: 400 16px/1.5em sans-serif;
   margin: 0;
-  padding: 0;
 }
-.container{
-  position: absolute;
-  align-items: center;
-  display: flex;
-}
-#login-form{
-  position: absolute;
-  ali
+.container {
+  left: 50%;
+  position: fixed;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
-form {
+/* ---------- LOGIN-FORM ---------- */
+#login-form {
   width: 350px;
-  position: relative;
+
 }
-form .form-field::before {
-  font-size: 20px;
-  position: absolute;
-  left: 15px;
-  top: 17px;
-  color: #888888;
-  content: " ";
-  display: block;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-form .form-field:nth-child(1)::before {
-  background-image: url(img/user-icon.png);
-  width: 20px;
-  height: 20px;
-  top: 15px;
-}
-form .form-field:nth-child(2)::before {
-  background-image: url(img/lock-icon.png);
-  width: 16px;
-  height: 16px;
-}
-form .form-field {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  margin-bottom: 1rem;
-  position: relative;
-}
-form input {
-  font-family: inherit;
-  width: 100%;
-  outline: none;
-  background-color: #fff;
-  border-radius: 4px;
-  border: none;
-  display: block;
-  padding: 0.9rem 0.7rem;
-  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
-  font-size: 17px;
-  color: #4A4A4A;
-  text-indent: 40px;
-}
-form .btn {
-  outline: none;
-  border: none;
-  cursor: pointer;
-  display: inline-block;
-  margin: 0 auto;
-  padding: 0.9rem 2.5rem;
-  text-align: center;
-  background-color: #47AB11;
+
+#login-form h3 {
+  background-color: Maroon;
+  border-radius: 5px 5px 0 0;
   color: #fff;
-  border-radius: 4px;
-  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
-  font-size: 17px;
+  font-size: 14px;
+  padding: 20px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+#login-form fieldset {
+  background: #fff;
+  border-radius: 0 0 5px 5px;
+  padding: 20px;
+  position: relative;
+}
+
+#login-form fieldset:before {
+  background-color: #fff;
+  content: "";
+  height: 8px;
+  left: 50%;
+  margin: -4px 0 0 -4px;
+  position: absolute;
+  top: 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  width: 8px;
+}
+
+#login-form input {
+  font-size: 14px;
+}
+
+#login-form input[type="text"],
+#login-form input[type="password"] {
+  border: 1px solid #dcdcdc;
+  padding: 12px 10px;
+  width: 100%;
+}
+
+#login-form input[type="text"] {
+  border-radius: 3px 3px 0 0;
+}
+
+#login-form input[type="password"] {
+  border-top: none;
+  border-radius: 0px 0px 3px 3px;
+}
+
+#login-form input[type="submit"] {
+  background: Maroon;
+  border-radius: 3px;
+  color: #fff;
+  float: right;
+  font-weight: bold;
+  margin-top: 20px;
+  padding: 12px 20px;
+}
+
+#login-form input[type="submit"]:hover {
+  background: Maroon;
 }
